@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="768" Width="1024" Background="White" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="COMMITE WAS CHANGED" HorizontalAlignment="Center" Margin="274,273,226.6,291.4" VerticalAlignment="Center" Width="517" Height="174" Click="Button_Click" FontSize="40" FontFamily="Tahoma" FontWeight="Bold"/>
+        <Button Content="CHANGED" HorizontalAlignment="Center" Margin="274,273,226.6,291.4" VerticalAlignment="Center" Width="517" Height="174" Click="Button_Click" FontSize="40" FontFamily="Tahoma" FontWeight="Bold"/>
     </Grid>
 </Window>
