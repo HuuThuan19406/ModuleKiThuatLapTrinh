@@ -25,7 +25,7 @@ namespace BaiTapNhom
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void lstvThongTin_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
