@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="QUẢN LÝ NHÂN SỰ" FontSize="20" FontFamily="Tahoma" Height="768" Width="1024" ResizeMode="NoResize" Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
     <Grid>
-        <ListView x:Name="lstvThongTin" Width="965" Height="300" VerticalAlignment="Bottom" SelectionChanged="lstvThongTin_SelectionChanged" Margin="0,0,0,29.5" >
+        <ListView x:Name="lstvThongTin" Width="965" Height="300" VerticalAlignment="Bottom" SelectionChanged="lstvThongTin_SelectionChanged" Margin="0,0,0,26.3" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="STT" Width="70"></GridViewColumn>
