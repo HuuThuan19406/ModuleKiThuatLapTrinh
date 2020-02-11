@@ -19,7 +19,7 @@
                     <GridViewColumn Header="Bộ phận" Width="125"></GridViewColumn>
                     <GridViewColumn Header="Chức vụ" Width="125"></GridViewColumn>
                 </GridView>
-            </ListView.View>  
+            </ListView.View>
 
         </ListView>
     </Grid>
