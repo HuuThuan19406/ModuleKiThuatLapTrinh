@@ -22,13 +22,22 @@ namespace BaiTapNhom
         public Window1()
         {
             InitializeComponent();
+            txtTaiKhoan.Text = "admin";
+            pwbMatKhau.Password = "123456";
         }
 
         private void DangNhap_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow frmMain = new MainWindow();
-            frmMain.Show();
-            Close();
+            if ((txtTaiKhoan.Text.ToLower() == "admin") && (pwbMatKhau.Password == "123456"))
+            {
+                MainWindow frmMain = new MainWindow();
+                frmMain.Show();
+                Close();
+            }
+            else
+                MessageBox.Show("THÔNG TIN MẶC ĐỊNH" +
+                                "\nTài khoản: admin" +
+                                "\nMật khẩu: 123456", "Nhắc nhở",MessageBoxButton.OK,MessageBoxImage.Information);               
         }
     }
 }

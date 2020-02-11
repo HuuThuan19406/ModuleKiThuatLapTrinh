@@ -12,7 +12,7 @@
         <TextBlock Height="25" Width="100" Margin="10,10,150,115.4">Tài khoản:</TextBlock>
         <TextBox x:Name="txtTaiKhoan" FontSize="15" Height="25" Margin="100,10,9.6,115.4"/>
         <TextBlock x:Name="txbMatKhau" Height="25" Width="100" Margin="10,55,150,61.4">Mật khẩu:</TextBlock>
-        <PasswordBox x:Name="pbMatKhau" FontSize="15" Height="25" Margin="100,55,9.6,61.4"/>
+        <PasswordBox x:Name="pwbMatKhau" FontSize="15" Height="25" Margin="100,55,9.6,61.4"/>
         <Button x:Name="DangNhap" Height="35" Width="100"
                 Margin="0,100,0,15.4" VerticalAlignment="Center" Background="LightGreen" Click="DangNhap_Click">Đăng nhập</Button>
     </Grid>
