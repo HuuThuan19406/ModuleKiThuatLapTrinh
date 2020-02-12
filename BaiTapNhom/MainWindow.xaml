@@ -44,18 +44,24 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Image  Source="Ảnh 3x4/Demo-01.png"
-                            Height="140" Width="105"
-                            VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,10,10"></Image>
-                    <StackPanel Height="Auto" Width="180" HorizontalAlignment="Left" Margin="22,163,0,-119.2">
-                        <Button Style="{StaticResource tempButton}" Content="THÊM NHÂN SỰ" Margin="0,0,-0.4,0"/>
-                        <Button Style="{StaticResource tempButton}" Content="XÓA NHÂN SỰ"/>
-                        <Button Style="{StaticResource tempButton}" Margin="0,0,-0.4,0" Content="TRA CỨU NHÂN SỰ"/>
-                        <Button Style="{StaticResource tempButton}" Content="SỬA THÔNG TIN"/>
-                        <Button Style="{StaticResource tempButton}" Content="XUẤT DANH SÁCH"/>
+                    <Image x:Name="imgAnhDaiDien" Source="Ảnh 3x4\Demo-01.png"
+                            Height="170" Width="127.5"
+                            VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,10,10"
+                            MouseRightButtonUp="imgAnhDaiDien_MouseRightButtonUp" Stretch="UniformToFill">
+                        <Image.ToolTip>
+                            <ToolTip HasDropShadow="False" VerticalAlignment="Bottom">
+                                Nhấp phải chuột để tải ảnh lên
+                            </ToolTip>
+                        </Image.ToolTip>
+                    </Image>
+                    <StackPanel Height="Auto" Width="180" HorizontalAlignment="Left" Margin="22,190,0,-150.2">
+                        <Button Content="THÊM NHÂN SỰ"/>
+                        <Button Content="XÓA NHÂN SỰ"/>
+                        <Button Content="TRA CỨU NHÂN SỰ"/>
+                        <Button Content="SỬA THÔNG TIN"/>
+                        <Button Content="XUẤT DANH SÁCH"/>
                     </StackPanel>
                     <TextBlock HorizontalAlignment="Left" Margin="182,10,0,0" TextWrapping="Wrap" Text="Họ và tên:" VerticalAlignment="Top"/>
-
                 </Grid>
             </TabItem>
             <TabItem Header="CHẤM CÔNG">
@@ -78,7 +84,6 @@
 
                 </Grid>
             </TabItem>
-
         </TabControl>
     </Grid>
 </Window>
