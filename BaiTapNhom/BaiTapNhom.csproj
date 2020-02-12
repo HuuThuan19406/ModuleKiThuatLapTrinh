@@ -108,5 +108,9 @@
   <ItemGroup>
     <Resource Include="1791-_Converted_-01.ico" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Ảnh 3x4\Demo-01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

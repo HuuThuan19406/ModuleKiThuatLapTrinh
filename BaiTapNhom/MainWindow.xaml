@@ -41,6 +41,9 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
+                    <Image  Source="Ảnh 3x4/Demo-01.png"
+                            Height="140" Width="105"
+                            VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,10,10"></Image>
                     <StackPanel Height="Auto" Width="180" HorizontalAlignment="Left" Margin="22,163,0,-119.2">
                         <Button Style="{StaticResource tempButton}" Content="THÊM NHÂN SỰ" Margin="0,0,-0.4,0"/>
                         <Button Style="{StaticResource tempButton}" Content="XÓA NHÂN SỰ"/>
