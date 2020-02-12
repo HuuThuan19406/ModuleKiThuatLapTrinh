@@ -28,6 +28,8 @@ namespace BaiTapNhom
         private void lstvThongTin_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-        }
+        }       
+
+        
     }
 }

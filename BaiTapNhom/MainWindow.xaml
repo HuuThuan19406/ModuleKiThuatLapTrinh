@@ -5,22 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BaiTapNhom"
         mc:Ignorable="d"
-        Title="QUẢN LÝ NHÂN SỰ" FontSize="20" FontFamily="Tahoma" Height="768" Width="1024" ResizeMode="NoResize" Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <ListView x:Name="lstvThongTin" Width="965" Height="300" VerticalAlignment="Bottom" SelectionChanged="lstvThongTin_SelectionChanged" Margin="0,0,0,26.3" >
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="STT" Width="70"></GridViewColumn>
-                    <GridViewColumn Header="Họ và tên" Width="175"></GridViewColumn>
-                    <GridViewColumn Header="G.tính" Width="70"></GridViewColumn>
-                    <GridViewColumn Header="Ngày sinh" Width="125"></GridViewColumn>
-                    <GridViewColumn Header="Quê quán" Width="125"></GridViewColumn>
-                    <GridViewColumn Header="Số điện thoại" Width="150"></GridViewColumn>
-                    <GridViewColumn Header="Bộ phận" Width="125"></GridViewColumn>
-                    <GridViewColumn Header="Chức vụ" Width="125"></GridViewColumn>
-                </GridView>
-            </ListView.View>
+        Title="QUẢN LÝ NHÂN SỰ" FontSize="20" FontFamily="UTM Daxline"
+        Height="768" Width="1024" ResizeMode="CanMinimize" 
+        Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="tempButton">
+            <Setter Property="Button.Background" Value="AliceBlue"/>
+            <Setter Property="Button.Foreground" Value="MediumBlue"/>
+            <Setter Property="Button.FontWeight" Value="Bold"/>
+            <Setter Property="Button.Height" Value="40"/>
+            <Setter Property="Button.Width" Value="250"/>
+        </Style>
+        <Style x:Key="tempTabItem">
+            <Setter Property="ItemsControl.Background" Value="AliceBlue"/>
+            <Setter Property="ItemsControl.Foreground" Value="MediumBlue"/>
+            <Setter Property="ItemsControl.FontWeight" Value="Bold"/>
+            <Setter Property="ItemsControl.Width" Value="150"/>
+        </Style>
+    </Window.Resources>
+    <Grid>        
+        <TabControl >
+            <TabItem Name="tabItemThongTin" Style="{StaticResource tempTabItem}" Header="THÔNG TIN">
+                <Grid Width="1024" HorizontalAlignment="Center">
+                    <ListView x:Name="lstvThongTin" Width="980" Height="300"  VerticalAlignment="Bottom" Margin="18.8" SelectionChanged="lstvThongTin_SelectionChanged"  >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="STT" Width="50"></GridViewColumn>
+                                <GridViewColumn Header="Họ và tên" Width="150"></GridViewColumn>
+                                <GridViewColumn Header="Mã số" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="G.tính" Width="70"></GridViewColumn>
+                                <GridViewColumn Header="Ngày sinh" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="Quê quán" Width="110"></GridViewColumn>
+                                <GridViewColumn Header="Số điện thoại" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="Bộ phận" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="Chức vụ" Width="120"></GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <StackPanel Height="Auto" Width="250" Margin="752,158,22,318.8">
+                        <Button Style="{StaticResource tempButton}" Content="THÊM NHÂN SỰ" Margin="0,0,-0.4,0"/>
+                        <Button Style="{StaticResource tempButton}" Content="XÓA NHÂN SỰ"/>
+                        <Button Style="{StaticResource tempButton}" Margin="0,0,-0.4,0" Content="TRA CỨU NHÂN SỰ"/>
+                        <Button Style="{StaticResource tempButton}" Content="SỬA THÔNG TIN"/>
+                        <Button Style="{StaticResource tempButton}" Content="XUẤT DANH SÁCH"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Style="{StaticResource tempTabItem}" Header="CHẤM CÔNG">
+                <Grid Width="1024" HorizontalAlignment="Center">
+                    
+                </Grid>
+            </TabItem>
+            <TabItem Style="{StaticResource tempTabItem}" Header="KHEN THƯỞNG">
+                <Grid Width="1024" HorizontalAlignment="Center">
 
-        </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Style="{StaticResource tempTabItem}" Header="TỔ CHỨC">
+                <Grid Width="1024" HorizontalAlignment="Center">
+
+                </Grid>
+            </TabItem>
+            <TabItem Style="{StaticResource tempTabItem}" Header="CÀI ĐẶT">
+                <Grid Width="1024" HorizontalAlignment="Center">
+
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
