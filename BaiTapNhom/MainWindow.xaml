@@ -9,38 +9,44 @@
         Height="768" Width="1024" ResizeMode="CanMinimize" 
         Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <Style x:Key="tempButton">
-            <Setter Property="Button.Background" Value="AliceBlue"/>
-            <Setter Property="Button.Foreground" Value="MediumBlue"/>
-            <Setter Property="Button.FontWeight" Value="Bold"/>
-            <Setter Property="Button.Height" Value="40"/>            
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="Foreground" Value="MediumBlue"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="35"/>
         </Style>
-        <Style x:Key="tempTabItem">
-            <Setter Property="ItemsControl.Background" Value="AliceBlue"/>
-            <Setter Property="ItemsControl.Foreground" Value="MediumBlue"/>
-            <Setter Property="ItemsControl.FontWeight" Value="Bold"/>
-            <Setter Property="ItemsControl.Width" Value="150"/>
+        <Style TargetType="TabItem">
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="Foreground" Value="MediumBlue"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Width" Value="150"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"/>
         </Style>
     </Window.Resources>
-    <Grid>        
-        <TabControl >
-            <TabItem Name="tabItemThongTin" Style="{StaticResource tempTabItem}" Header="THÔNG TIN">
+    <Grid>
+        <TabControl>
+            <TabItem Name="tabItemThongTin" Header="THÔNG TIN">
                 <Grid Width="1024" HorizontalAlignment="Center">
-                    <ListView x:Name="lstvThongTin" Width="980" Height="300"  VerticalAlignment="Bottom" Margin="18.8" SelectionChanged="lstvThongTin_SelectionChanged"  >
+                    <ListView x:Name="lstvThongTin" Width="980" Height="300"  VerticalAlignment="Bottom" Margin="18.8">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="STT" Width="50"></GridViewColumn>
                                 <GridViewColumn Header="Họ và tên" Width="150"></GridViewColumn>
-                                <GridViewColumn Header="Mã số" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="Mã số" Width="110"></GridViewColumn>
                                 <GridViewColumn Header="G.tính" Width="70"></GridViewColumn>
-                                <GridViewColumn Header="Ngày sinh" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="Ngày sinh" Width="110"></GridViewColumn>
                                 <GridViewColumn Header="Quê quán" Width="110"></GridViewColumn>
-                                <GridViewColumn Header="Số điện thoại" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="Số điện thoại" Width="140"></GridViewColumn>
                                 <GridViewColumn Header="Bộ phận" Width="120"></GridViewColumn>
                                 <GridViewColumn Header="Chức vụ" Width="120"></GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
+                    <Image  Source="Ảnh 3x4/Demo-01.png"
+                            Height="140" Width="105"
+                            VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,10,10"></Image>
                     <StackPanel Height="Auto" Width="180" HorizontalAlignment="Left" Margin="22,163,0,-119.2">
                         <Button Style="{StaticResource tempButton}" Content="THÊM NHÂN SỰ" Margin="0,0,-0.4,0"/>
                         <Button Style="{StaticResource tempButton}" Content="XÓA NHÂN SỰ"/>
@@ -48,28 +54,31 @@
                         <Button Style="{StaticResource tempButton}" Content="SỬA THÔNG TIN"/>
                         <Button Style="{StaticResource tempButton}" Content="XUẤT DANH SÁCH"/>
                     </StackPanel>
+                    <TextBlock HorizontalAlignment="Left" Margin="182,10,0,0" TextWrapping="Wrap" Text="Họ và tên:" VerticalAlignment="Top"/>
+
                 </Grid>
             </TabItem>
-            <TabItem Style="{StaticResource tempTabItem}" Header="CHẤM CÔNG">
-                <Grid Width="1024" HorizontalAlignment="Center">
-                    
-                </Grid>
-            </TabItem>
-            <TabItem Style="{StaticResource tempTabItem}" Header="KHEN THƯỞNG">
+            <TabItem Header="CHẤM CÔNG">
                 <Grid Width="1024" HorizontalAlignment="Center">
 
                 </Grid>
             </TabItem>
-            <TabItem Style="{StaticResource tempTabItem}" Header="TỔ CHỨC">
+            <TabItem Header="KHEN THƯỞNG">
                 <Grid Width="1024" HorizontalAlignment="Center">
 
                 </Grid>
             </TabItem>
-            <TabItem Style="{StaticResource tempTabItem}" Header="CÀI ĐẶT">
+            <TabItem Header="TỔ CHỨC">
                 <Grid Width="1024" HorizontalAlignment="Center">
 
                 </Grid>
             </TabItem>
+            <TabItem Header="CÀI ĐẶT">
+                <Grid Width="1024" HorizontalAlignment="Center">
+
+                </Grid>
+            </TabItem>
+
         </TabControl>
     </Grid>
 </Window>

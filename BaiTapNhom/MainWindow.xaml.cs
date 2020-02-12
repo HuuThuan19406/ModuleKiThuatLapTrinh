@@ -28,7 +28,28 @@ namespace BaiTapNhom
         private void lstvThongTin_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-        }       
+        }
+
+        private void imgAnhDaiDien_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog fileSource = new Microsoft.Win32.OpenFileDialog();
+            if(fileSource.ShowDialog()==true)
+            {
+                imgAnhDaiDien.Source = new BitmapImage(new Uri(fileSource.FileName));
+            }            
+        }
+
+        private void imgAnhDaiDien_MouseHover(object sender, MouseEventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.Content = "Nhấp phải chuột để tải ảnh lên";
+        }
+
+        private void imgAnhDaiDien_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+            
+        }
 
         
     }
