@@ -13,8 +13,7 @@
             <Setter Property="Button.Background" Value="AliceBlue"/>
             <Setter Property="Button.Foreground" Value="MediumBlue"/>
             <Setter Property="Button.FontWeight" Value="Bold"/>
-            <Setter Property="Button.Height" Value="40"/>
-            <Setter Property="Button.Width" Value="250"/>
+            <Setter Property="Button.Height" Value="40"/>            
         </Style>
         <Style x:Key="tempTabItem">
             <Setter Property="ItemsControl.Background" Value="AliceBlue"/>
@@ -42,7 +41,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <StackPanel Height="Auto" Width="250" Margin="752,158,22,318.8">
+                    <StackPanel Height="Auto" Width="180" HorizontalAlignment="Left" Margin="22,163,0,-119.2">
                         <Button Style="{StaticResource tempButton}" Content="THÊM NHÂN SỰ" Margin="0,0,-0.4,0"/>
                         <Button Style="{StaticResource tempButton}" Content="XÓA NHÂN SỰ"/>
                         <Button Style="{StaticResource tempButton}" Margin="0,0,-0.4,0" Content="TRA CỨU NHÂN SỰ"/>
