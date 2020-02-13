@@ -25,7 +25,6 @@ namespace BaiTapNhom
         {
             InitializeComponent();
             ThongTin_NewLoad();
-            Combobox_LoadItems(cboQueQuan, "DanhSachTinhThanh.txt");            
         }
 
         public void ThongTin_NewLoad()
@@ -40,17 +39,8 @@ namespace BaiTapNhom
             txtMaNhanVien.Text = "Mã được cấp tự động";
             txtBoPhan.Text = "Phân tại TỔ CHỨC";
             txtChucVu.Text = "Phân tại TỔ CHỨC";
-        }
-        public void Combobox_LoadItems(ComboBox comboBox,string path)
-        {
-            StreamReader sourceFile = new StreamReader(path);
-            while(!sourceFile.EndOfStream)
-            {
-                comboBox.Items.Add(sourceFile.ReadLine());
-            }
-            sourceFile.Close();
-        }
-        
+        }     
+
 
         private void lstvThongTin_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

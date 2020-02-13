@@ -104,7 +104,71 @@
                     <TextBlock HorizontalAlignment="Left" Margin="571,70,0,0" TextWrapping="Wrap" Text="Ngày sinh:" VerticalAlignment="Top"/>
                     <DatePicker Name="dtpNgaySinh" HorizontalAlignment="Left" Margin="692,70,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
                     <TextBlock HorizontalAlignment="Left" Margin="182,120,0,0" TextWrapping="Wrap" Text="Quê quán:" VerticalAlignment="Top"/>
-                    <ComboBox Name="cboQueQuan" HorizontalAlignment="Left" Margin="274,120,0,0" VerticalAlignment="Top" Width="270"/>
+                    <ComboBox Name="cboQueQuan" HorizontalAlignment="Left" Margin="274,120,0,0" VerticalAlignment="Top" Width="270">
+                        <ComboBoxItem Content="An Giang"/>
+                        <ComboBoxItem Content="Bà Rịa - Vũng Tàu"/>
+                        <ComboBoxItem Content="Bắc Giang"/>
+                        <ComboBoxItem Content="Bắc Kạn"/>
+                        <ComboBoxItem Content="Bạc Liêu"/>
+                        <ComboBoxItem Content="Bắc Ninh"/>
+                        <ComboBoxItem Content="Bến Tre"/>
+                        <ComboBoxItem Content="Bình Định"/>
+                        <ComboBoxItem Content="Bình Dương"/>
+                        <ComboBoxItem Content="Bình Phước"/>
+                        <ComboBoxItem Content="Bình Thuận"/>
+                        <ComboBoxItem Content="Cà Mau"/>
+                        <ComboBoxItem Content="Cần Thơ"/>
+                        <ComboBoxItem Content="Cao Bằng"/>
+                        <ComboBoxItem Content="Đà Nẵng"/>
+                        <ComboBoxItem Content="Đắk Lắk"/>
+                        <ComboBoxItem Content="Đắk Nông"/>
+                        <ComboBoxItem Content="Điện Biên"/>
+                        <ComboBoxItem Content="Đồng Nai"/>
+                        <ComboBoxItem Content="Đồng Tháp"/>
+                        <ComboBoxItem Content="Gia Lai"/>
+                        <ComboBoxItem Content="Hà Giang"/>
+                        <ComboBoxItem Content="Hà Nam"/>
+                        <ComboBoxItem Content="Hà Nội"/>
+                        <ComboBoxItem Content="Hà Tĩnh"/>
+                        <ComboBoxItem Content="Hải Dương"/>
+                        <ComboBoxItem Content="Hải Phòng"/>
+                        <ComboBoxItem Content="Hậu Giang"/>
+                        <ComboBoxItem Content="Hòa Bình"/>
+                        <ComboBoxItem Content="Hưng Yên"/>
+                        <ComboBoxItem Content="Khánh Hòa"/>
+                        <ComboBoxItem Content="Kiên Giang"/>
+                        <ComboBoxItem Content="Kon Tum"/>
+                        <ComboBoxItem Content="Lai Châu"/>
+                        <ComboBoxItem Content="Lâm Đồng"/>
+                        <ComboBoxItem Content="Lạng Sơn"/>
+                        <ComboBoxItem Content="Lào Cai"/>
+                        <ComboBoxItem Content="Long An"/>
+                        <ComboBoxItem Content="Nam Định"/>
+                        <ComboBoxItem Content="Nghệ An"/>
+                        <ComboBoxItem Content="Ninh Bình"/>
+                        <ComboBoxItem Content="Ninh Thuận"/>
+                        <ComboBoxItem Content="Phú Thọ"/>
+                        <ComboBoxItem Content="Phú Yên"/>
+                        <ComboBoxItem Content="Quảng Bình"/>
+                        <ComboBoxItem Content="Quảng Nam"/>
+                        <ComboBoxItem Content="Quảng Ngãi"/>
+                        <ComboBoxItem Content="Quảng Ninh"/>
+                        <ComboBoxItem Content="Quảng Trị"/>
+                        <ComboBoxItem Content="Sóc Trăng"/>
+                        <ComboBoxItem Content="Sơn La"/>
+                        <ComboBoxItem Content="Tây Ninh"/>
+                        <ComboBoxItem Content="Thái Bình"/>
+                        <ComboBoxItem Content="Thái Nguyên"/>
+                        <ComboBoxItem Content="Thanh Hóa"/>
+                        <ComboBoxItem Content="Thừa Thiên Huế"/>
+                        <ComboBoxItem Content="Tiền Giang"/>
+                        <ComboBoxItem Content="Thành phố Hồ Chí Minh"/>
+                        <ComboBoxItem Content="Trà Vinh"/>
+                        <ComboBoxItem Content="Tuyên Quang"/>
+                        <ComboBoxItem Content="Vĩnh Long"/>
+                        <ComboBoxItem Content="Vĩnh Phúc"/>
+                        <ComboBoxItem Content="Yên Bái"/>
+                    </ComboBox>
                     <TextBlock HorizontalAlignment="Left" Margin="571,120,0,0" TextWrapping="Wrap" Text="Số điện thoại:" VerticalAlignment="Top"/>
                     <TextBox x:Name="txtSoDienThoai" HorizontalAlignment="Left" Margin="692,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
                     <TextBlock HorizontalAlignment="Left" Margin="182,170,0,0" TextWrapping="Wrap" Text="Bộ phận:" VerticalAlignment="Top"/>

@@ -97,7 +97,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="bin\Debug\BaiTapNhom.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,13 +111,6 @@
   <ItemGroup>
     <Resource Include="Ảnh 3x4\Demo-01.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\BaiTapNhom.exe" />
-    <Content Include="bin\Debug\BaiTapNhom.pdb" />
-    <Resource Include="bin\Debug\DanhSachTinhThanh.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
