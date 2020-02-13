@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace BaiTapNhom
 {
@@ -23,7 +24,33 @@ namespace BaiTapNhom
         public MainWindow()
         {
             InitializeComponent();
+            ThongTin_NewLoad();
+            Combobox_LoadItems(cboQueQuan, "DanhSachTinhThanh.txt");            
         }
+
+        public void ThongTin_NewLoad()
+        {
+            txtHoVaTen.Clear();
+            txtCMND_CCCD.Clear();
+            txtSoDienThoai.Clear();
+            cboGioiTinh.SelectedIndex = -1;
+            cboQueQuan.SelectedIndex = -1;
+            dtpNgaySinh.SelectedDate = DateTime.Today;
+            dtpNgayVao.SelectedDate = DateTime.Today;
+            txtMaNhanVien.Text = "Mã được cấp tự động";
+            txtBoPhan.Text = "Phân tại TỔ CHỨC";
+            txtChucVu.Text = "Phân tại TỔ CHỨC";
+        }
+        public void Combobox_LoadItems(ComboBox comboBox,string path)
+        {
+            StreamReader sourceFile = new StreamReader(path);
+            while(!sourceFile.EndOfStream)
+            {
+                comboBox.Items.Add(sourceFile.ReadLine());
+            }
+            sourceFile.Close();
+        }
+        
 
         private void lstvThongTin_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

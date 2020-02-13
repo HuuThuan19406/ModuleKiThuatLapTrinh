@@ -15,6 +15,25 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Height" Value="35"/>
         </Style>
+        <Style TargetType="ComboBox" >
+            <Setter Property="Foreground" Value="MediumBlue"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Height" Value="auto"/>
+        </Style>
+        <Style TargetType="DatePicker" >
+            <Setter Property="Foreground" Value="MediumBlue"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style TargetType="TextBox" >
+            <Setter Property="Foreground" Value="MediumBlue"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Height" Value="auto"/>
+        </Style>
         <Style TargetType="TabItem">
             <Setter Property="Background" Value="AliceBlue"/>
             <Setter Property="Foreground" Value="MediumBlue"/>
@@ -29,39 +48,72 @@
         <TabControl>
             <TabItem Name="tabItemThongTin" Header="THÔNG TIN">
                 <Grid Width="1024" HorizontalAlignment="Center">
-                    <ListView x:Name="lstvThongTin" Width="980" Height="300"  VerticalAlignment="Bottom" Margin="18.8">
+                    <ListView x:Name="lstvThongTin" Width="980" Height="395"  VerticalAlignment="Bottom" Margin="22,0,22,18.8">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="STT" Width="50"></GridViewColumn>
                                 <GridViewColumn Header="Họ và tên" Width="150"></GridViewColumn>
-                                <GridViewColumn Header="Mã số" Width="110"></GridViewColumn>
+                                <GridViewColumn Header="CMND/CCCD" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="Mã n.viên" Width="120"></GridViewColumn>
                                 <GridViewColumn Header="G.tính" Width="70"></GridViewColumn>
                                 <GridViewColumn Header="Ngày sinh" Width="110"></GridViewColumn>
                                 <GridViewColumn Header="Quê quán" Width="110"></GridViewColumn>
-                                <GridViewColumn Header="Số điện thoại" Width="140"></GridViewColumn>
+                                <GridViewColumn Header="Số điện thoại" Width="130"></GridViewColumn>
                                 <GridViewColumn Header="Bộ phận" Width="120"></GridViewColumn>
                                 <GridViewColumn Header="Chức vụ" Width="120"></GridViewColumn>
+                                <GridViewColumn Header="Ngày vào" Width="110"></GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
                     <Image x:Name="imgAnhDaiDien" Source="Ảnh 3x4\Demo-01.png"
-                            Height="170" Width="127.5"
-                            VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,10,10"
+                            Height="186" Width="139.5"
+                            VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,0,0"
                             MouseRightButtonUp="imgAnhDaiDien_MouseRightButtonUp" Stretch="UniformToFill">
                         <Image.ToolTip>
                             <ToolTip HasDropShadow="False" VerticalAlignment="Bottom">
-                                Nhấp phải chuột để tải ảnh lên
+                                Nhấp phải chuột để tải ảnh (3x4) lên
                             </ToolTip>
                         </Image.ToolTip>
                     </Image>
-                    <StackPanel Height="Auto" Width="180" HorizontalAlignment="Left" Margin="22,190,0,-150.2">
-                        <Button Content="THÊM NHÂN SỰ"/>
-                        <Button Content="XÓA NHÂN SỰ"/>
-                        <Button Content="TRA CỨU NHÂN SỰ"/>
-                        <Button Content="SỬA THÔNG TIN"/>
-                        <Button Content="XUẤT DANH SÁCH"/>
+                    <StackPanel Orientation="Horizontal" 
+                                Margin="22,220,22,22" VerticalAlignment="Top"
+                                Height="35" Width="980">
+                        <Button Width="196" Content="THÊM NHÂN SỰ"/>
+                        <Button Width="196" Content="XÓA NHÂN SỰ"/>
+                        <Button Width="196" Content="TRA CỨU NHÂN SỰ"/>
+                        <Button Width="196" Content="SỬA THÔNG TIN"/>
+                        <Button Width="196" Content="XUẤT DANH SÁCH"/>
                     </StackPanel>
-                    <TextBlock HorizontalAlignment="Left" Margin="182,10,0,0" TextWrapping="Wrap" Text="Họ và tên:" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="182,20,0,0" TextWrapping="Wrap" Text="Họ và tên:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtHoVaTen" HorizontalAlignment="Left" Margin="274,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="571,20,0,0" TextWrapping="Wrap" Text="CMND/CCCD:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtCMND_CCCD" HorizontalAlignment="Left" Margin="692,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="182,70,0,0" TextWrapping="Wrap" Text="Mã nhân viên:" VerticalAlignment="Top">
+                        <TextBlock.ToolTip>
+                            <ToolTip HasDropShadow="False" VerticalAlignment="Bottom">
+                                Mã nhân viên được cấp tự động, không thể thay đổi
+                            </ToolTip>
+                        </TextBlock.ToolTip>
+                    </TextBlock>
+                    <TextBox x:Name="txtMaNhanVien" Background="WhiteSmoke" IsEnabled="False" HorizontalAlignment="Left" Margin="309,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="850,20,0,0" TextWrapping="Wrap" Text="Giới tính:" VerticalAlignment="Top"/>
+                    <ComboBox Name="cboGioiTinh" HorizontalAlignment="Left" Margin="931,20,0,0" VerticalAlignment="Top" Width="71" Height="25">
+                        <ComboBoxItem Content="Nam"/>
+                        <ComboBoxItem Content="Nữ"/>
+                    </ComboBox>
+                    <TextBlock HorizontalAlignment="Left" Margin="571,70,0,0" TextWrapping="Wrap" Text="Ngày sinh:" VerticalAlignment="Top"/>
+                    <DatePicker Name="dtpNgaySinh" HorizontalAlignment="Left" Margin="692,70,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="182,120,0,0" TextWrapping="Wrap" Text="Quê quán:" VerticalAlignment="Top"/>
+                    <ComboBox Name="cboQueQuan" HorizontalAlignment="Left" Margin="274,120,0,0" VerticalAlignment="Top" Width="270"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="571,120,0,0" TextWrapping="Wrap" Text="Số điện thoại:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtSoDienThoai" HorizontalAlignment="Left" Margin="692,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="182,170,0,0" TextWrapping="Wrap" Text="Bộ phận:" VerticalAlignment="Top"/>
+                    <TextBox Name="txtBoPhan" IsEnabled="False" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="262,170,0,0" VerticalAlignment="Top" Width="200"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="478,170,0,0" TextWrapping="Wrap" Text="Chức vụ:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtChucVu" Background="WhiteSmoke" IsEnabled="False" HorizontalAlignment="Left" Margin="555,170,0,0" VerticalAlignment="Top" Width="200"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="768,170,0,0" TextWrapping="Wrap" Text="Ngày vào:" VerticalAlignment="Top"/>
+                    <DatePicker x:Name="dtpNgayVao" HorizontalAlignment="Left" Margin="862,170,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="CHẤM CÔNG">
