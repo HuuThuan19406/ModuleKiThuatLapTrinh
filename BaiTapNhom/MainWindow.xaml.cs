@@ -55,5 +55,21 @@ namespace BaiTapNhom
                 imgAnhDaiDien.Source = new BitmapImage(new Uri(fileSource.FileName));
             }            
         }
+
+        TraCuu frmTraCuu;
+        private void btnTraCuuNhanSu_Click(object sender, RoutedEventArgs e)
+        {
+            if (frmTraCuu == null)
+                frmTraCuu = new TraCuu();
+
+            // you need to take care of form closing because the object being disposed)    
+            frmTraCuu.Closed += delegate { frmTraCuu = null; };
+
+            if (frmTraCuu.WindowState == WindowState.Minimized)
+                frmTraCuu.WindowState = WindowState.Normal;
+
+            frmTraCuu.Show();
+            frmTraCuu.Activate();
+        }
     }
 }

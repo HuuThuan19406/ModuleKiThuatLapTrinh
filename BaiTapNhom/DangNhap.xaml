@@ -1,4 +1,4 @@
-﻿<Window x:Class="BaiTapNhom.Window1"
+﻿<Window x:Class="BaiTapNhom.DangNhap"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,12 +8,26 @@
         Title="Đăng nhập" Height="187.719" Width="271.93" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
                           FontFamily="Tahoma" FontSize="18"
                           Background="WhiteSmoke">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="Foreground" Value="MediumBlue"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="35"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="MediumBlue"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Height" Value="auto"/>
+        </Style>
+    </Window.Resources>
     <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock Height="25" Width="100" Margin="10,10,150,115.4">Tài khoản:</TextBlock>
         <TextBox x:Name="txtTaiKhoan" FontSize="15" Height="25" Margin="100,10,9.6,115.4"/>
         <TextBlock x:Name="txbMatKhau" Height="25" Width="100" Margin="10,55,150,61.4">Mật khẩu:</TextBlock>
         <PasswordBox x:Name="pwbMatKhau" FontSize="15" Height="25" Margin="100,55,9.6,61.4"/>
-        <Button x:Name="DangNhap" Height="35" Width="100"
-                Margin="0,100,0,15.4" VerticalAlignment="Center" Background="LightGreen" Click="DangNhap_Click">Đăng nhập</Button>
+        <Button x:Name="btnDangNhap" Height="35" Width="110"
+                Margin="0,100,0,15.4" VerticalAlignment="Center" Click="DangNhap_Click">Đăng nhập</Button>
     </Grid>
 </Window>

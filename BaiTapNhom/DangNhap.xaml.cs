@@ -17,9 +17,9 @@ namespace BaiTapNhom
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class DangNhap : Window
     {
-        public Window1()
+        public DangNhap()
         {
             InitializeComponent();
             txtTaiKhoan.Text = "admin";
