@@ -65,7 +65,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Image x:Name="imgAnhDaiDien" Source="Ảnh 3x4\Demo-01.png"
+                    <Image x:Name="imgAnhDaiDien" Source="Picture/AvatarDemo.png"
                             Height="186" Width="139.5"
                             VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,0,0"
                             MouseRightButtonUp="imgAnhDaiDien_MouseRightButtonUp" Stretch="UniformToFill">
@@ -78,11 +78,11 @@
                     <StackPanel Orientation="Horizontal" 
                                 Margin="22,220,22,22" VerticalAlignment="Top"
                                 Height="35" Width="980">
-                        <Button Width="196" Content="THÊM NHÂN SỰ"/>
-                        <Button Width="196" Content="XÓA NHÂN SỰ"/>
-                        <Button Width="196" Content="TRA CỨU NHÂN SỰ"/>
-                        <Button Width="196" Content="SỬA THÔNG TIN"/>
-                        <Button Width="196" Content="XUẤT DANH SÁCH"/>
+                        <Button x:Name="btnThemNhanSu" Width="196" Content="THÊM NHÂN SỰ"/>
+                        <Button x:Name="btnXoaNhanSu" Width="196" Content="XÓA NHÂN SỰ"/>
+                        <Button x:Name="btnTraCuuNhanSu" Width="196" Content="TRA CỨU NHÂN SỰ" Click="btnTraCuuNhanSu_Click"/>
+                        <Button x:Name="btnSuaThongTin" Width="196" Content="SỬA THÔNG TIN"/>
+                        <Button x:Name="btnXuatDanhSach" Width="196" Content="XUẤT DANH SÁCH"/>
                     </StackPanel>
                     <TextBlock HorizontalAlignment="Left" Margin="182,20,0,0" TextWrapping="Wrap" Text="Họ và tên:" VerticalAlignment="Top"/>
                     <TextBox x:Name="txtHoVaTen" HorizontalAlignment="Left" Margin="274,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
