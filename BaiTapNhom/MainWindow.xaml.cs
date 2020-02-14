@@ -21,10 +21,13 @@ namespace BaiTapNhom
     /// </summary>
     public partial class MainWindow : Window
     {
+        double defaultSize = 18;
         public MainWindow()
         {
             InitializeComponent();
             ThongTin_NewLoad();
+            CaiDat_NewLoad();
+            FontLoading();
         }
 
         public void ThongTin_NewLoad()
@@ -39,8 +42,21 @@ namespace BaiTapNhom
             txtMaNhanVien.Text = "Mã được cấp tự động";
             txtBoPhan.Text = "Phân tại TỔ CHỨC";
             txtChucVu.Text = "Phân tại TỔ CHỨC";
-        }     
-
+        }
+        
+        public void FontLoading()
+        {
+            
+            foreach(FontFamily fontFamily in Fonts.SystemFontFamilies)
+            {
+                cboKieuChu.Items.Add(fontFamily.ToString());
+            }
+        }
+        public void CaiDat_NewLoad()
+        {
+            sliderFontSize.Value = defaultSize;
+            cboKieuChu.SelectedItem = "Consolas";
+        }
 
         private void lstvThongTin_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -70,6 +86,23 @@ namespace BaiTapNhom
 
             frmTraCuu.Show();
             frmTraCuu.Activate();
+        }
+
+        private void btnThayStyle_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+
+        }
+
+        private void sliderFontSize_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            FontSize = sliderFontSize.Value;
+        }
+
+        private void cboKieuChu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FontFamily = new System.Windows.Media.FontFamily(cboKieuChu.SelectedItem.ToString());
         }
     }
 }
