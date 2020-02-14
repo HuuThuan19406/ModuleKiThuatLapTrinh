@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BaiTapNhom"
         mc:Ignorable="d"
-        Title="QUẢN LÝ NHÂN SỰ" FontSize="20" FontFamily="UTM Daxline"
+        Title="QUẢN LÝ NHÂN SỰ" FontSize="20.5" FontFamily="UTM Daxline"
         Height="768" Width="1024" ResizeMode="CanMinimize" 
         Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
     <Window.Resources>
@@ -25,8 +25,7 @@
         <Style TargetType="DatePicker" >
             <Setter Property="Foreground" Value="MediumBlue"/>
             <Setter Property="FontFamily" Value="Consolas"/>
-            <Setter Property="FontWeight" Value="Medium"/>
-            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Medium"/>           
         </Style>
         <Style TargetType="TextBox" >
             <Setter Property="Foreground" Value="MediumBlue"/>
@@ -44,7 +43,7 @@
             <Setter Property="Foreground" Value="Black"/>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid x:Name="gridMainWindow">
         <TabControl>
             <TabItem Name="tabItemThongTin" Header="THÔNG TIN">
                 <Grid Width="1024" HorizontalAlignment="Center">
@@ -97,7 +96,7 @@
                     </TextBlock>
                     <TextBox x:Name="txtMaNhanVien" Background="WhiteSmoke" IsEnabled="False" HorizontalAlignment="Left" Margin="309,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235"/>
                     <TextBlock HorizontalAlignment="Left" Margin="850,20,0,0" TextWrapping="Wrap" Text="Giới tính:" VerticalAlignment="Top"/>
-                    <ComboBox Name="cboGioiTinh" HorizontalAlignment="Left" Margin="931,20,0,0" VerticalAlignment="Top" Width="71" Height="25">
+                    <ComboBox Name="cboGioiTinh" HorizontalAlignment="Left" Margin="931,20,0,0" VerticalAlignment="Top" Width="71">
                         <ComboBoxItem Content="Nam"/>
                         <ComboBoxItem Content="Nữ"/>
                     </ComboBox>
@@ -196,8 +195,12 @@
                 </Grid>
             </TabItem>
             <TabItem Header="CÀI ĐẶT">
-                <Grid Width="1024" HorizontalAlignment="Center">
-
+                <Grid Width="600" Margin="0,70" VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <TextBlock Text="Kích cỡ chữ:"/>
+                    <Slider x:Name="sliderFontSize" HorizontalAlignment="Right" Minimum="12" Maximum="20.5"
+                            Margin="0,0,0,0" Width="450" VerticalAlignment="Top" ValueChanged="sliderFontSize_ValueChanged"/>
+                    <TextBlock Text="Kiểu chữ:" Margin="0,70"/>
+                    <ComboBox Name="cboKieuChu" Width="450" VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,70" SelectionChanged="cboKieuChu_SelectionChanged"/>
                 </Grid>
             </TabItem>
         </TabControl>
