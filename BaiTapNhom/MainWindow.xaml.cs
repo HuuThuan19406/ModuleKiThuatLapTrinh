@@ -21,7 +21,7 @@ namespace BaiTapNhom
     /// </summary>
     public partial class MainWindow : Window
     {
-        double defaultSize = 18;
+        double defaultSize = 15.5;
         public MainWindow()
         {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace BaiTapNhom
             dtpNgayVao.SelectedDate = DateTime.Today;
             txtMaNhanVien.Text = "Mã được cấp tự động";
             txtBoPhan.Text = "Phân tại TỔ CHỨC";
-            txtChucVu.Text = "Phân tại TỔ CHỨC";
+            txtChucVu.Text = "Phân tại TỔ CHỨC";             
         }
         
         public void FontLoading()
