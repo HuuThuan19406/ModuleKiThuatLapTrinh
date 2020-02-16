@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BaiTapNhom"
         mc:Ignorable="d"
-        Title="QUẢN LÝ NHÂN SỰ" FontSize="20.5" FontFamily="UTM Daxline"
+        Title="QUẢN LÝ NHÂN SỰ - Phiên bản 1.0" FontSize="20.5" FontFamily="UTM Daxline"
         Height="768" Width="1024"  
         Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
     <Window.Resources>
@@ -47,7 +47,7 @@
         <TabControl>
             <TabItem Name="tabItemThongTin" Header="THÔNG TIN">
                 <Grid Width="1024" HorizontalAlignment="Center">
-                    <ListView x:Name="lstvThongTin" Width="980" Height="395"  VerticalAlignment="Bottom" Margin="22,0,22,18.8">
+                    <ListView x:Name="lstvThongTin" Width="980" Height="395"  VerticalAlignment="Bottom" Margin="22,0,22,18.8" SelectionChanged="lstvThongTin_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="STT" Width="50">
@@ -130,7 +130,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Image x:Name="imgAnhDaiDien" Source="Picture/AvatarDemo.png"
+                    <Image x:Name="imgAnhDaiDien" 
                             Height="186" Width="139.5"
                             VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,10,0,0"
                             MouseRightButtonUp="imgAnhDaiDien_MouseRightButtonUp" Stretch="UniformToFill">
@@ -146,7 +146,7 @@
                         <Button x:Name="btnThemNhanSu" Width="196" Content="THÊM NHÂN SỰ" Click="btnThemNhanSu_Click"/>
                         <Button x:Name="btnXoaNhanSu" Width="196" Content="XÓA NHÂN SỰ"/>
                         <Button x:Name="btnTraCuuNhanSu" Width="196" Content="TRA CỨU NHÂN SỰ" Click="btnTraCuuNhanSu_Click"/>
-                        <Button x:Name="btnSuaThongTin" Width="196" Content="SỬA THÔNG TIN"/>
+                        <Button x:Name="btnSuaThongTin" Width="196" Content="SỬA THÔNG TIN" Click="btnSuaThongTin_Click"/>
                         <Button x:Name="btnXuatDanhSach" Width="196" Content="XUẤT DANH SÁCH"/>
                     </StackPanel>
                     <TextBlock HorizontalAlignment="Left" Width="90" Margin="182,20,0,0" TextWrapping="Wrap" Text="Họ và tên:" VerticalAlignment="Top"/>
@@ -162,14 +162,14 @@
                     </TextBlock>
                     <TextBox x:Name="txtMaNhanVien" Background="WhiteSmoke" IsEnabled="False" HorizontalAlignment="Left" Margin="309,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235"/>
                     <TextBlock HorizontalAlignment="Left" Width="80" Margin="850,20,0,0" TextWrapping="Wrap" Text="Giới tính:" VerticalAlignment="Top"/>
-                    <ComboBox Name="cboGioiTinh" HorizontalAlignment="Left" Margin="931,20,0,0" VerticalAlignment="Top" Width="71">
+                    <ComboBox Name="cboGioiTinh" SelectedValuePath="Content" HorizontalAlignment="Left" Margin="931,20,0,0" VerticalAlignment="Top" Width="71">
                         <ComboBoxItem Content="Nam"/>
                         <ComboBoxItem Content="Nữ"/>
                     </ComboBox>
                     <TextBlock Width="94" HorizontalAlignment="Left" Margin="571,70,0,0" TextWrapping="Wrap" Text="Ngày sinh:" VerticalAlignment="Top"/>
                     <DatePicker Name="dtpNgaySinh" FontSize="18" HorizontalAlignment="Left" Margin="692,70,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
                     <TextBlock Width="90" HorizontalAlignment="Left" Margin="182,120,0,0" TextWrapping="Wrap" Text="Quê quán:" VerticalAlignment="Top"/>
-                    <ComboBox Name="cboQueQuan" HorizontalAlignment="Left" Margin="274,120,0,0" VerticalAlignment="Top" Width="270">
+                    <ComboBox Name="cboQueQuan" SelectedValuePath="Content" HorizontalAlignment="Left" Margin="274,120,0,0" VerticalAlignment="Top" Width="270">
                         <ComboBoxItem Content="An Giang"/>
                         <ComboBoxItem Content="Bà Rịa - Vũng Tàu"/>
                         <ComboBoxItem Content="Bắc Giang"/>

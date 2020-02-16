@@ -24,5 +24,6 @@ namespace BaiTapNhom
         public string BoPhan { get; set; }
         public string ChucVu { get; set; }
         public string NgayVao { get; set; }
+        public string Avatar { get; set; }
     }
 }
