@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BaiTapNhom"
         mc:Ignorable="d"
-        Title="Tra Cứu" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="Picture/SearchIcon.png" Height="370" Width="370" Background="WhiteSmoke">
+        Title="Tra Cứu" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Height="370" Width="370" Background="WhiteSmoke">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="AliceBlue"/>
@@ -26,11 +26,11 @@
         </Style>
     </Window.Resources>
     <Grid Height="350" Width="370">
-        <Image Source="Picture/SearchICon.png" Opacity="0.15" Height="300" Width="300"/>
+        <Image x:Name="imgBackGround" Opacity="0.15" Height="300" Width="300"/>
         <TextBlock FontSize="30" FontWeight="Bold" Foreground="MediumBlue" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TRA CỨU NHÂN SỰ" VerticalAlignment="Top" Margin="0,30,0,0"/>
         <TextBox x:Name="txtTraCuu" FontSize="30" Width="300" Margin="35,86,35,226"   />
         <Grid Height="90" Margin="85,142,46,118">
-            <RadioButton x:Name="rdoCMND" VerticalAlignment="Top" Content="Tra theo CMND/CCCD"/>
+            <RadioButton x:Name="rdoCMND" VerticalAlignment="Top" Content="Tra theo CMND/CCCD" Checked="rdoCMND_Checked"/>
             <RadioButton x:Name="rdoMaNhanVien" VerticalAlignment="Center" Content="Tra theo Mã Nhân Viên"/>
             <RadioButton x:Name="rdoSoDienThoai" VerticalAlignment="Bottom" Content="Tra theo Số Điện Thoại"/>
         </Grid>

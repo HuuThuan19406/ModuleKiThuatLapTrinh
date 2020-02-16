@@ -51,7 +51,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1791-_Converted_-01.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -129,21 +130,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="1791-_Converted_-01.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Picture\AvatarDemo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Picture\SearchIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ThongTinNhanSu.mdf">
+    <Content Include="Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ThongTinNhanSu_log.ldf">
+    <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ThongTinNhanSu.mdf</DependentUpon>
+      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
