@@ -13,7 +13,6 @@ namespace BaiTapNhom
         {
 
         }
-        public string STT { get; set; }
         public string HoTen { get; set; }
         public string CMND { get; set; }
         public string MaNhanVien { get; set; }

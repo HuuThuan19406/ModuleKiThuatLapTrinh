@@ -25,7 +25,7 @@
         <Style TargetType="DatePicker" >
             <Setter Property="Foreground" Value="MediumBlue"/>
             <Setter Property="FontFamily" Value="Consolas"/>
-            <Setter Property="FontWeight" Value="Medium"/>           
+            <Setter Property="FontWeight" Value="Medium"/>
         </Style>
         <Style TargetType="TextBox" >
             <Setter Property="Foreground" Value="MediumBlue"/>
@@ -47,16 +47,9 @@
         <TabControl>
             <TabItem Name="tabItemThongTin" Header="THÔNG TIN">
                 <Grid Width="1024" HorizontalAlignment="Center">
-                    <ListView x:Name="lstvThongTin" Width="980" Height="395"  VerticalAlignment="Bottom" Margin="22,0,22,18.8" SelectionChanged="lstvThongTin_SelectionChanged">
+                    <ListView x:Name="lstvThongTin" Width="980" Height="299"  VerticalAlignment="Bottom" Margin="22,0,22,114.8" SelectionChanged="lstvThongTin_SelectionChanged">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="STT" Width="50">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding STT}"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
                                 <GridViewColumn Header="Họ và tên" Width="150">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
@@ -64,14 +57,14 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="CMND/CCCD" Width="120">
+                                <GridViewColumn Header="CMND/CCCD" Width="130">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding CMND}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Mã n.viên" Width="120">
+                                <GridViewColumn Header="Mã n.viên" Width="130">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding MaNhanVien}"/>
@@ -85,21 +78,21 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Ngày sinh" Width="110">
+                                <GridViewColumn Header="Ngày sinh" Width="120">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding NgaySinh}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Quê quán" Width="110">
+                                <GridViewColumn Header="Quê quán" Width="120">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding QueQuan}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Số điện thoại" Width="130">
+                                <GridViewColumn Header="Số điện thoại" Width="140">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding SoDienThoai}"/>
@@ -144,7 +137,7 @@
                                 Margin="22,0,22,440" VerticalAlignment="Bottom"
                                 Height="35" Width="980">
                         <Button x:Name="btnThemNhanSu" Width="196" Content="THÊM NHÂN SỰ" Click="btnThemNhanSu_Click"/>
-                        <Button x:Name="btnXoaNhanSu" Width="196" Content="XÓA NHÂN SỰ"/>
+                        <Button x:Name="btnXoaNhanSu" Width="196" Content="XÓA NHÂN SỰ" Click="btnXoaNhanSu_Click"/>
                         <Button x:Name="btnTraCuuNhanSu" Width="196" Content="TRA CỨU NHÂN SỰ" Click="btnTraCuuNhanSu_Click"/>
                         <Button x:Name="btnSuaThongTin" Width="196" Content="SỬA THÔNG TIN" Click="btnSuaThongTin_Click"/>
                         <Button x:Name="btnXuatDanhSach" Width="196" Content="XUẤT DANH SÁCH"/>
@@ -242,6 +235,9 @@
                     <TextBox x:Name="txtChucVu" Background="WhiteSmoke" IsEnabled="False" HorizontalAlignment="Left" Margin="555,170,0,0" VerticalAlignment="Top" Width="200"/>
                     <TextBlock Width="90" HorizontalAlignment="Left" Margin="768,170,0,0" TextWrapping="Wrap" Text="Ngày vào:" VerticalAlignment="Top"/>
                     <DatePicker x:Name="dtpNgayVao" FontSize="18" HorizontalAlignment="Left" Margin="862,170,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
+                    <ProgressBar HorizontalAlignment="Center" Height="27" Margin="22,0,22,22" VerticalAlignment="Bottom" Width="975" RenderTransformOrigin="0.5,0.5"/>
+                    <TextBlock x:Name="txbSoNhanSu" HorizontalAlignment="Right" Margin="0,0,22,67.8" Foreground="Blue" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+
 
                 </Grid>
             </TabItem>
@@ -255,7 +251,7 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="TỔ CHỨC">
+            <TabItem Header="THỐNG KÊ">
                 <Grid Width="1024" HorizontalAlignment="Center">
 
                 </Grid>
