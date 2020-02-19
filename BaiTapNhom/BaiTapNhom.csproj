@@ -75,13 +75,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CLASS\ChuyenDoi.cs" />
+    <Compile Include="CLASS\HienThi.cs" />
+    <Compile Include="CLASS\SQL.cs" />
     <Compile Include="DangNhap.xaml.cs">
       <DependentUpon>DangNhap.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu.cs" />
+    <Compile Include="CLASS\NhanSu.cs" />
+    <Compile Include="WaitForLoading.xaml.cs">
+      <DependentUpon>WaitForLoading.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TraCuu.xaml.cs">
       <DependentUpon>TraCuu.xaml</DependentUpon>
     </Compile>
+    <Page Include="WaitForLoading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
