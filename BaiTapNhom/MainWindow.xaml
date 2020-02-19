@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="QUẢN LÝ NHÂN SỰ - Phiên bản 1.0" FontSize="20.5" FontFamily="UTM Daxline"
         Height="768" Width="1024"  
-        Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
+        Background="WhiteSmoke" WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="AliceBlue"/>
@@ -47,7 +47,7 @@
         <TabControl>
             <TabItem Name="tabItemThongTin" Header="THÔNG TIN">
                 <Grid Width="1024" HorizontalAlignment="Center">
-                    <ListView x:Name="lstvThongTin" Width="980" Height="299"  VerticalAlignment="Bottom" Margin="22,0,22,114.8" SelectionChanged="lstvThongTin_SelectionChanged">
+                    <ListView x:Name="lstvThongTin" Width="980" Height="344"  VerticalAlignment="Bottom" Margin="22,0,22,65" SelectionChanged="lstvThongTin_SelectionChanged" MouseDoubleClick="lstvThongTin_MouseDoubleClick" >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Họ và tên" Width="150">
@@ -163,7 +163,7 @@
                     <DatePicker Name="dtpNgaySinh" FontSize="18" HorizontalAlignment="Left" Margin="692,70,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
                     <TextBlock Width="90" HorizontalAlignment="Left" Margin="182,120,0,0" TextWrapping="Wrap" Text="Quê quán:" VerticalAlignment="Top"/>
                     <ComboBox Name="cboQueQuan" SelectedValuePath="Content" HorizontalAlignment="Left" Margin="274,120,0,0" VerticalAlignment="Top" Width="270">
-                        <ComboBoxItem Content="An Giang"/>
+                        <ComboBoxItem HorizontalAlignment="Center" Content="An Giang"/>
                         <ComboBoxItem Content="Bà Rịa - Vũng Tàu"/>
                         <ComboBoxItem Content="Bắc Giang"/>
                         <ComboBoxItem Content="Bắc Kạn"/>
@@ -235,10 +235,7 @@
                     <TextBox x:Name="txtChucVu" Background="WhiteSmoke" IsEnabled="False" HorizontalAlignment="Left" Margin="555,170,0,0" VerticalAlignment="Top" Width="200"/>
                     <TextBlock Width="90" HorizontalAlignment="Left" Margin="768,170,0,0" TextWrapping="Wrap" Text="Ngày vào:" VerticalAlignment="Top"/>
                     <DatePicker x:Name="dtpNgayVao" FontSize="18" HorizontalAlignment="Left" Margin="862,170,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
-                    <ProgressBar HorizontalAlignment="Center" Height="27" Margin="22,0,22,22" VerticalAlignment="Bottom" Width="975" RenderTransformOrigin="0.5,0.5"/>
-                    <TextBlock x:Name="txbSoNhanSu" HorizontalAlignment="Right" Margin="0,0,22,67.8" Foreground="Blue" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
-
-
+                    <TextBlock x:Name="txbSoNhanSu" Text="//Text will show in here" HorizontalAlignment="Right" Margin="0,0,22,22" Foreground="Blue" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
                 </Grid>
             </TabItem>
             <TabItem Header="CHẤM CÔNG">
