@@ -18,7 +18,7 @@ namespace BaiTapNhom
         public string MaNhanVien { get; set; }
         public string GioiTinh { get; set; }
         public string NgaySinh { get; set; }
-        public string QueQuan { get; set; }        
+        public string QueQuan { get; set; }
         public string SoDienThoai { get; set; }
         public string BoPhan { get; set; }
         public string ChucVu { get; set; }

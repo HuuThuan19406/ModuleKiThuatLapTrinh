@@ -1,0 +1,14 @@
+﻿<Window x:Class="BaiTapNhom.WaitForLoading"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaiTapNhom"
+        mc:Ignorable="d"
+        Title="WaitForLoading" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" IsEnabled="False" Height="200" Width="400">
+    <Grid>
+        <Label Content="Chương trình đang được tải, vui lòng đợi..." Foreground="MediumBlue" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25"/>
+        <ProgressBar x:Name="ProgressBar" VerticalAlignment="Center" Margin="25,50,25,25" Foreground="RoyalBlue" Height = "15"  
+                  IsIndeterminate = "True" />
+    </Grid>
+</Window>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="QUẢN LÝ NHÂN SỰ - Phiên bản 1.0" FontSize="20.5" FontFamily="UTM Daxline"
         Height="768" Width="1024"  
-        Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
+        Background="WhiteSmoke" WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="AliceBlue"/>
@@ -25,7 +25,7 @@
         <Style TargetType="DatePicker" >
             <Setter Property="Foreground" Value="MediumBlue"/>
             <Setter Property="FontFamily" Value="Consolas"/>
-            <Setter Property="FontWeight" Value="Medium"/>           
+            <Setter Property="FontWeight" Value="Medium"/>
         </Style>
         <Style TargetType="TextBox" >
             <Setter Property="Foreground" Value="MediumBlue"/>
@@ -47,16 +47,9 @@
         <TabControl>
             <TabItem Name="tabItemThongTin" Header="THÔNG TIN">
                 <Grid Width="1024" HorizontalAlignment="Center">
-                    <ListView x:Name="lstvThongTin" Width="980" Height="395"  VerticalAlignment="Bottom" Margin="22,0,22,18.8" SelectionChanged="lstvThongTin_SelectionChanged">
+                    <ListView x:Name="lstvThongTin" Width="980" Height="344"  VerticalAlignment="Bottom" Margin="22,0,22,65" SelectionChanged="lstvThongTin_SelectionChanged" MouseDoubleClick="lstvThongTin_MouseDoubleClick" >
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="STT" Width="50">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding STT}"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
                                 <GridViewColumn Header="Họ và tên" Width="150">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
@@ -64,14 +57,14 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="CMND/CCCD" Width="120">
+                                <GridViewColumn Header="CMND/CCCD" Width="130">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding CMND}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Mã n.viên" Width="120">
+                                <GridViewColumn Header="Mã n.viên" Width="130">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding MaNhanVien}"/>
@@ -85,21 +78,21 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Ngày sinh" Width="110">
+                                <GridViewColumn Header="Ngày sinh" Width="120">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding NgaySinh}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Quê quán" Width="110">
+                                <GridViewColumn Header="Quê quán" Width="120">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding QueQuan}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Số điện thoại" Width="130">
+                                <GridViewColumn Header="Số điện thoại" Width="140">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding SoDienThoai}"/>
@@ -144,7 +137,7 @@
                                 Margin="22,0,22,440" VerticalAlignment="Bottom"
                                 Height="35" Width="980">
                         <Button x:Name="btnThemNhanSu" Width="196" Content="THÊM NHÂN SỰ" Click="btnThemNhanSu_Click"/>
-                        <Button x:Name="btnXoaNhanSu" Width="196" Content="XÓA NHÂN SỰ"/>
+                        <Button x:Name="btnXoaNhanSu" Width="196" Content="XÓA NHÂN SỰ" Click="btnXoaNhanSu_Click"/>
                         <Button x:Name="btnTraCuuNhanSu" Width="196" Content="TRA CỨU NHÂN SỰ" Click="btnTraCuuNhanSu_Click"/>
                         <Button x:Name="btnSuaThongTin" Width="196" Content="SỬA THÔNG TIN" Click="btnSuaThongTin_Click"/>
                         <Button x:Name="btnXuatDanhSach" Width="196" Content="XUẤT DANH SÁCH"/>
@@ -170,7 +163,7 @@
                     <DatePicker Name="dtpNgaySinh" FontSize="18" HorizontalAlignment="Left" Margin="692,70,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
                     <TextBlock Width="90" HorizontalAlignment="Left" Margin="182,120,0,0" TextWrapping="Wrap" Text="Quê quán:" VerticalAlignment="Top"/>
                     <ComboBox Name="cboQueQuan" SelectedValuePath="Content" HorizontalAlignment="Left" Margin="274,120,0,0" VerticalAlignment="Top" Width="270">
-                        <ComboBoxItem Content="An Giang"/>
+                        <ComboBoxItem HorizontalAlignment="Center" Content="An Giang"/>
                         <ComboBoxItem Content="Bà Rịa - Vũng Tàu"/>
                         <ComboBoxItem Content="Bắc Giang"/>
                         <ComboBoxItem Content="Bắc Kạn"/>
@@ -242,7 +235,7 @@
                     <TextBox x:Name="txtChucVu" Background="WhiteSmoke" IsEnabled="False" HorizontalAlignment="Left" Margin="555,170,0,0" VerticalAlignment="Top" Width="200"/>
                     <TextBlock Width="90" HorizontalAlignment="Left" Margin="768,170,0,0" TextWrapping="Wrap" Text="Ngày vào:" VerticalAlignment="Top"/>
                     <DatePicker x:Name="dtpNgayVao" FontSize="18" HorizontalAlignment="Left" Margin="862,170,0,0" VerticalAlignment="Top" Height="25" Width="140"/>
-
+                    <TextBlock x:Name="txbSoNhanSu" Text="//Text will show in here" HorizontalAlignment="Right" Margin="0,0,22,22" Foreground="Blue" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
                 </Grid>
             </TabItem>
             <TabItem Header="CHẤM CÔNG">
@@ -255,7 +248,7 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="TỔ CHỨC">
+            <TabItem Header="THỐNG KÊ">
                 <Grid Width="1024" HorizontalAlignment="Center">
 
                 </Grid>
